@@ -1,1 +1,18 @@
 
+import java.util.*;
+public class Words_alphabeticalOrder {
+    public static void main(String[] args) {
+        Scanner in =new Scanner(System.in);
+        String str=in.nextLine();
+        char ch;
+        for(int i=65;i<=90;i++){
+            for(int j=0;j<=str.length()-1;j++){
+                ch=str.charAt(j);
+                if(ch==(char)i||ch==(char)(i+32)){
+                    System.out.print(ch);
+                }
+            }
+        }
+    }
+    
+}
