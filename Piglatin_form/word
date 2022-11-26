@@ -1,0 +1,19 @@
+// Piglatin form of a word
+import java.util.*;
+public class Piglatin_Form {
+    public static void main(String[] args) {
+        Scanner in=new Scanner (System.in);
+        int i;
+        String str1,str2,str3;
+        System.out.println("Enter the string");
+        str1=in.nextLine();
+        for(i=0;i<=str1.length()-1;i++){
+            char ch=str1.charAt(i);
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+            break;
+        }
+        str2=str1.substring(i,str1.length());
+        str3=str1.substring(0,i);
+        System.out.println(str2+str3+"ay");
+    }
+  } 
