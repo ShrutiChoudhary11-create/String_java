@@ -1,0 +1,28 @@
+import java.util.*;
+public class Reverse_String {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the String");
+        String str=in.nextLine();
+        int l=str.length();
+        int j=0;
+        for(int i=0;i<=l-1;i++){
+        int a=str.lastIndexOf(' ');
+        if(a>=0){
+        String str1=str.substring(a+1,l);
+        System.out.print(str1+" ");
+        str=str.substring(j,a);
+        l=a;}else{
+            str=str.substring(j,l);
+    System.out.println(str);
+    break;
+        }
+         if(i>l){
+             str=str.substring(j,l);
+             System.out.println(str);
+             break;
+        }
+    }
+    }
+}
+
