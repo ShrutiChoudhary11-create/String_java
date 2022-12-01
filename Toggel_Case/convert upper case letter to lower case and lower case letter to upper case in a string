@@ -1,0 +1,26 @@
+import java .util.*;
+public class Toggel_Case {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String str1="";
+        System.out.println("Enter the String");
+        String str=in.nextLine();
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+            if(ch>='A'&&ch<='Z'){
+             str1=str1+Character.toLowerCase(ch);
+            }
+            if(ch>='a'&&ch<='z'){
+                str1=str1+Character.toUpperCase(ch);
+            }
+            if(ch==' '){
+                str1=str1+" ";
+            }
+              //System.out.println(str1);
+        }
+        System.out.println(str1);
+ 
+    }
+    
+}
