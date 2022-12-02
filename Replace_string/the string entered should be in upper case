@@ -1,0 +1,26 @@
+import java.util.*;
+public class Replace_letters {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter a String");
+        String str=in.nextLine();
+        String word="";
+        char ch,chr;
+        for(int i=0;i<str.length();i++){
+            ch=str.charAt(i);
+            if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+            word=word+ch; 
+            if((ch!='A')&&(ch!='E')&&(ch!='I')&&(ch!='O')&&(ch!='U')&&(ch!=' ')){
+            chr=(char)((int)ch-1);
+            if(chr=='A'||chr=='E'||chr=='I'||chr=='O'||chr=='U'){
+            chr=(char)(((int)ch)+1);
+            }
+            word=word+chr;
+            }
+            if(ch==' ')
+            word=word+" ";
+        }
+        System.out.println(word);
+    }
+    
+}
