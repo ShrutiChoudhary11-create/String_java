@@ -1,0 +1,26 @@
+import java.util.*;
+public class Encrypt_Word {
+    public static void main(String[] args) {
+        Scanner in=new Scanner (System.in);
+        char p=' ';
+        char ch;
+        String str1="";
+        System.out.println("Enter a word");
+        String str=in.nextLine();
+        for(int i=0;i<str.length();i++){
+            ch=str.charAt(i);
+            if(ch>='a'&&ch<='z'||ch>='A'&&ch<='Z'){
+                if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+                 p=(char)((int)(ch+2));
+                else
+                p=(char)((int)(ch+1));
+            }
+            else if(ch=='z'||ch=='Z')
+            {
+                p=(char)((int)(ch-25));
+            }
+            System.out.print(p);
+        }
+    }
+}
+    
