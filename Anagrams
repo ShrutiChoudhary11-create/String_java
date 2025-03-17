@@ -1,0 +1,50 @@
+import java.util.*;
+
+public class Anagrams {
+    public static void main(String args[]){
+       Scanner in=new Scanner(System.in);
+       String s1=in.nextLine();
+       String s2=in.nextLine();
+       s1=s1.toUpperCase();
+       s2=s2.toUpperCase();
+        
+       HashMap <String,Integer> mp1= new HashMap<>();
+       HashMap <String,Integer> mp2= new HashMap<>();
+
+       // split string by no space 
+        String[] strSplit1 = s1.split(""); 
+  
+        // Now convert string into ArrayList 
+        ArrayList<String> strList1 = new ArrayList<String>( 
+            Arrays.asList(strSplit1)); 
+        
+            for(String s:strList1){
+                 mp1.put(s,mp1.getOrDefault(s,0)+1);
+            }
+
+            // System.out.println(mp1);
+
+
+             // split string by no space 
+        String[] strSplit2 = s2.split(""); 
+  
+        // Now convert string into ArrayList 
+        ArrayList<String> strList2 = new ArrayList<String>( 
+            Arrays.asList(strSplit2)); 
+        
+            for(String s:strList2){
+                 mp2.put(s,mp2.getOrDefault(s,0)+1);
+            }
+
+            // System.out.println(mp2);
+
+
+            if(mp1.equals(mp2)){
+                System.out.println("Anagrams");
+            }else{
+                System.out.println("Not Anagrams");
+            }
+
+    }
+    
+}
